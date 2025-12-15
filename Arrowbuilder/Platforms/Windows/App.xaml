@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Vision_Edit.WinUI.App"
+    x:Class="Arrowbuilder.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Vision_Edit.WinUI">
+    xmlns:local="using:Arrowbuilder.WinUI">
 
 </maui:MauiWinUIApplication>

@@ -1,12 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision Edit", "Vision Edit\Vision Edit.csproj", "{D23E43AB-177F-4EDA-976B-56BB7C112425}"
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11201.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrowbuilder", "Arrowbuilder\Arrowbuilder.csproj", "{D23E43AB-177F-4EDA-976B-56BB7C112425}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM", "ORM\ORM.csproj", "{501CEB3A-4FE6-485D-B08F-AD9551645BD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{90E1017D-21C6-4F72-B528-011A113FBB8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision Edit API", "Vision Edit API\Vision Edit API.csproj", "{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrowBuilder API", "ArrowBuilder API\ArrowBuilder API.csproj", "{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{EB58F1EC-CED9-469E-A972-5858B11F18E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql", "mysql", "{C5A31CF5-91AF-4668-BDBB-D252794CEDC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "init", "init", "{9AF57FDE-8CD2-4F7A-A2E5-67DF69F12603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +25,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D23E43AB-177F-4EDA-976B-56BB7C112425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D23E43AB-177F-4EDA-976B-56BB7C112425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23E43AB-177F-4EDA-976B-56BB7C112425}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{D23E43AB-177F-4EDA-976B-56BB7C112425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D23E43AB-177F-4EDA-976B-56BB7C112425}.Release|Any CPU.Build.0 = Release|Any CPU
 		{501CEB3A-4FE6-485D-B08F-AD9551645BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +40,15 @@ Global
 		{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5A31CF5-91AF-4668-BDBB-D252794CEDC6} = {EB58F1EC-CED9-469E-A972-5858B11F18E3}
+		{9AF57FDE-8CD2-4F7A-A2E5-67DF69F12603} = {C5A31CF5-91AF-4668-BDBB-D252794CEDC6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D76C0C4A-3518-4C73-8EA1-A6C2298E293B}
 	EndGlobalSection
 EndGlobal

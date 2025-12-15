@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Vision_Edit;
+namespace Arrowbuilder;
 
 public partial class App : Application
 {

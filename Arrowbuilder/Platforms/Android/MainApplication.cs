@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Vision_Edit;
+namespace Arrowbuilder;
 
 [Application]
 public class MainApplication : MauiApplication
