@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace Arrowbuilder.Models
 {
     public enum PointType
     {
@@ -14,14 +14,19 @@ namespace Models
 
     public class Point
     {
-        
-        public PointType PointType { get; private set; }
-        public string Manufacturer { get; private set; }
-        public double Weight { get; private set; }
-        public string Material { get; private set; }
-        public bool ScrewIn { get; private set; }
-        public double ThreadSize { get; private set; }
-        public double Diameter { get; private set; }
+        public int Id { get; set; }
+        public PointType PointType { get; set; }
+        public required string Manufacturer { get; set; }
+        public double Weight { get; set; }
+        public required string Material { get; set; }
+        public bool ScrewIn { get; set; }
+        public double ThreadSize { get; set; }
+        public double Diameter { get; set; }
+
+        // Parameterloser Constructor für EF Core
+        public Point()
+        {
+        }
 
         public Point(PointType pointType, string manufacturer, double weight, string material, bool screwIn, double threadSize = 0, double diameter = 0)
         {

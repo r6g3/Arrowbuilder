@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Models
+namespace Arrowbuilder.Models
 {
     // Plan (Pseudocode, detailliert):
     // - Klasse Arrow mit nicht-nullbaren benötigten Komponenten: Shaft, Fletching, Nock, Point und Purpose.
@@ -14,14 +14,28 @@ namespace Models
 
     public class Arrow
     {
-        public Shaft Shaft { get; }
-        public Fletching Fletching { get; }
-        public Nock Nock { get; }
-        public Insert? Insert { get; }
-        public Point Point { get; }
-        public double TotalLengthToString { get; }
-        public double Weight { get; }
-        public string Purpose { get; }
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public int ShaftId { get; set; }
+        public int FletchingId { get; set; }
+        public int NockId { get; set; }
+        public int? InsertId { get; set; }
+        public int PointId { get; set; }
+        
+        public Shaft Shaft { get; set; } = null!;
+        public Fletching Fletching { get; set; } = null!;
+        public Nock Nock { get; set; } = null!;
+        public Insert? Insert { get; set; }
+        public Point Point { get; set; } = null!;
+        
+        public double TotalLengthToString { get; set; }
+        public double Weight { get; set; }
+        public string Purpose { get; set; } = null!;
+
+        // Parameterloser Constructor für EF Core
+        public Arrow()
+        {
+        }
 
         public Arrow(
             Shaft shaft,

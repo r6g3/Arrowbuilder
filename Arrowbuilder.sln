@@ -11,12 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrowBuilder API", "ArrowBuilder API\ArrowBuilder API.csproj", "{427E3C7C-1B4D-4BEF-AB66-AF1D45152B1D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{EB58F1EC-CED9-469E-A972-5858B11F18E3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql", "mysql", "{C5A31CF5-91AF-4668-BDBB-D252794CEDC6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "init", "init", "{9AF57FDE-8CD2-4F7A-A2E5-67DF69F12603}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,10 +37,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C5A31CF5-91AF-4668-BDBB-D252794CEDC6} = {EB58F1EC-CED9-469E-A972-5858B11F18E3}
-		{9AF57FDE-8CD2-4F7A-A2E5-67DF69F12603} = {C5A31CF5-91AF-4668-BDBB-D252794CEDC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D76C0C4A-3518-4C73-8EA1-A6C2298E293B}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace Arrowbuilder.Models
 {
     public enum NockType
     {
@@ -10,20 +10,28 @@ namespace Models
         Pin,
         Regular
     }
+
     public class Nock
     {
-        private string manufacturer { get; set; }
-        private double diameter { get; set; }
-        private double weight { get; set; }
-        private NockType type{ get; set; } // next time an enum lighted, pin, regular, etc.
-        private double heightToBowstring { get; set; }
+        public int Id { get; set; }
+        public required string Manufacturer { get; set; }
+        public double Diameter { get; set; }
+        public double Weight { get; set; }
+        public NockType Type { get; set; }
+        public double HeightToBowstring { get; set; }
+
+        // Parameterloser Constructor für EF Core
+        public Nock()
+        {
+        }
+
         public Nock(string manufacturer, double diameter, double weight, NockType type, double heighToBowstring)
         {
-            this.manufacturer = manufacturer;
-            this.diameter = diameter;
-            this.weight = weight;
-            this.type = type;
-            this.heightToBowstring = heighToBowstring;
+            Manufacturer = manufacturer;
+            Diameter = diameter;
+            Weight = weight;
+            Type = type;
+            HeightToBowstring = heighToBowstring;
         }
     }
 }

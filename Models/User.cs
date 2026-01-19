@@ -1,21 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Models;
-
-public class User
+namespace Arrowbuilder.Models
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-
-    // Arrow ist internal; das Dictionary darf nicht public sein, sonst CS0052.
-    // Daher internal setzen. Als Property mit nur Getter, initialisiert.
-    internal Dictionary<string, Arrow> arrowPatches { get; } = new Dictionary<string, Arrow>();
-    public User(string Name, string Email,string Password)
+    public class User
     {
-        this.Name = Name;
-        this.Email = Email;
-        this.Password = Password;
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+
+        // Navigation Property für Arrows
+        public ICollection<Arrow> Arrows { get; set; } = new List<Arrow>();
+
+        // Parameterloser Constructor für EF Core
+        public User()
+        {
+        }
+
+        // Constructor für normale Verwendung
+        public User(string name, string email, string password)
+        {
+            Name = name;
+            Email = email;
+            PasswordHash = password;
+        }
     }
 }

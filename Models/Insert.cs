@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace Arrowbuilder.Models
 {
-    
     public class Insert
     {
-        private string manufacturer { get; set; }
-        private double weight { get; set; }
-        private double Diameter { get; set; }
-        private string threadSize { get; set; }
-        private string material { get; set; }
+        public int Id { get; set; }
+        public required string Manufacturer { get; set; }
+        public double Weight { get; set; }
+        public double Diameter { get; set; }
+        public required string ThreadSize { get; set; }
+        public required string Material { get; set; }
+
+        // Parameterloser Constructor für EF Core
+        public Insert()
+        {
+        }
+
         public Insert(string manufacturer, double weight, double diameter, string threadsize, string material)
         {
-            this.manufacturer = manufacturer;
-            this.weight = weight;
-            this.Diameter = diameter;
-            this.threadSize = threadsize;
-            this.material = material;
+            Manufacturer = manufacturer;
+            Weight = weight;
+            Diameter = diameter;
+            ThreadSize = threadsize;
+            Material = material;
         }
     }
 }

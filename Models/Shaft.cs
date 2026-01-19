@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Models
+namespace Arrowbuilder.Models
 {
     public class Shaft
     {
-        private double outerDiameter { get; set; }
-        private double innerDiameter { get; set; }
-        private double stockLength { get; set; }
-        private int spine { get; set; }
-        private double gpi { get; set; }
-        private double straightnessTolerance { get; set; }
-        private string material { get; set; }
-        private string manufacturer { get; set; }
+        public int Id { get; set; }
+        public double OuterDiameter { get; set; }
+        public double InnerDiameter { get; set; }
+        public double StockLength { get; set; }
+        public int Spine { get; set; }
+        public double Gpi { get; set; }
+        public double StraightnessTolerance { get; set; }
+        public required string Material { get; set; }
+        public required string Manufacturer { get; set; }
 
-        public Shaft(double outerDiameter, double innerDiameter, double stockLength, int spine, double gpi, double straightnessTolerance, string material, string manufacturer) 
+        // Parameterloser Constructor für EF Core
+        public Shaft()
         {
-            this.outerDiameter = outerDiameter;
-            this.innerDiameter = innerDiameter; 
-            this.stockLength = stockLength;
-            this.spine = spine;
-            this.gpi = gpi;
-            this.straightnessTolerance = straightnessTolerance;
-            this.material = material;
-            this.manufacturer = manufacturer;
+        }
+
+        public Shaft(double outerDiameter, double innerDiameter, double stockLength, int spine, double gpi, double straightnessTolerance, string material, string manufacturer)
+        {
+            OuterDiameter = outerDiameter;
+            InnerDiameter = innerDiameter;
+            StockLength = stockLength;
+            Spine = spine;
+            Gpi = gpi;
+            StraightnessTolerance = straightnessTolerance;
+            Material = material;
+            Manufacturer = manufacturer;
         }
     }
 }
